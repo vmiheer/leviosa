@@ -1,0 +1,19 @@
+The main.py is executable.
+Wrapper shell script is ruchi.sh execute it to see the helpertest.py execution.
+The helper.[c|h] includes the functions callable from python.
+Please refer ctypes module in it. http://docs.python.org/library/ctypes.html
+
+INSTALL
+_______
+
+$ make make
+$ make
+$ make install
+
+The above steps will create the libhelper.so.1 also install in current 
+directory.
+This shared lib will be used by ctypes.
+
+
+The example program XTest wrapper is helper_* functions. These are callable 
+from python directly.
