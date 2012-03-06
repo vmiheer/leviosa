@@ -16,9 +16,9 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 libhelper.so.1.0.1: helper.o
-	gcc -shared -Wl,-soname,libhelper.so.1 -o libhelper.so.1.0.1 helper.o -lc -lXtst -lc
+	gcc -shared -Wl,-fPIC,-soname,libhelper.so.1 -o libhelper.so.1.0.1 helper.o -lc -lXtst -lc -fPIC
 helper.o:
-	gcc helper.c -c -g -Wall
+	gcc -shared helper.c -fPIC -c -g -Wall 
 clean: 
 	rm -rf *.o *.so.*
 install:
