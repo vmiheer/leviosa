@@ -43,7 +43,7 @@ void helper_mov_relxy(int x,int y)
 {
 
 	XTestGrabControl(dpy,True);
-	XTestFakeMotionEvent(dpy,-1,x,y,CurrentTime);
+	XTestFakeRelativeMotionEvent(dpy,x,y,CurrentTime);
 	XSync(dpy,False);
 	XTestGrabControl(dpy,False);
 }
